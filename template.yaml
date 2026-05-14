@@ -65,10 +65,10 @@ Resources:
                 StringEquals:
                   AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${FrontendDistribution}"
 
-UploadFunction:
-      Type: AWS::Serverless::Function
-      Properties:
-      FunctionName: !sub "UploadFileFunction-${AWS::StackName}"
+  UploadFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "UploadFileFunction-${AWS::StackName}"
       Handler: app.lambda_handler
       Runtime: python3.10
       CodeUri: BACK/
